@@ -2,10 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 
-application = Flask(__name__)
-CORS(application)
+app = Flask(__name__)
+CORS(app)
 
-@application.route('/api/weather')
+@app.route('/api/weather')
 def get_weather():
     location = request.args.get('location')
     weather_data = fetch_weather_data(location)
@@ -25,4 +25,4 @@ def fetch_weather_data(location):
     }
 
 # if __name__ == '__main__':
-#     application.run(debug=True)
+#     app.run(debug=True)
