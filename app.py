@@ -24,5 +24,5 @@ def fetch_weather_data(location):
         'humidity': data['main']['humidity'],
     }
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
